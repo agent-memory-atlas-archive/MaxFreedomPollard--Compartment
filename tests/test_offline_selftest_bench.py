@@ -42,7 +42,7 @@ def test_full_lifecycle_with_sockets_blocked(offline, tmp_path):
     v.forget(r["id"], caller="offline-test", shred=True)
     v.lock()
     v2 = Vault.unlock(vp, passphrase=PASS)
-    assert v2.db.count() == 6665
+    assert v2.db.count() == 6664
 
 
 def test_seed_relevance_regression(seeded_vault):

@@ -83,7 +83,7 @@ def test_the_starting_memories_are_not_in_the_population(seeded_vault):
     assert v.db.count() > 6000
     before = v.db.recency_times().size
     assert before == v.status()["organic_records"]
-    assert before < 100, "the 6,665 starting memories are not the vault's own"
+    assert before < 100, "the 6,664 starting memories are not the vault's own"
     for i in range(3):
         _store(v, f"A memory the agent learned during use, number {i}",
                _journal=False)
